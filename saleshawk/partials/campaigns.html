@@ -1,0 +1,50 @@
+<div id="wrapper">
+
+	<div ng-include src="'partials/user-nav.html'"></div>
+
+	<div id="page-content-wrapper">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-lg-12">
+					<h2>Campaigns</h2>
+					<p>
+						<a ng-href="#/create-campaign-1" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> Create Campaign</a>
+						<br>
+						<br>
+					</p>
+
+					<p>
+						<table class="table">
+							<tr ng-repeat="campaign in campaigns">
+								<td class="col-md-3">
+									<img class="img-thumbnail" width="140px" src="http://c.shld.net/rpx/i/s/i/spin/image/spin_prod_831833212" style="padding-top:20px; padding-bottom:20px;">
+								</td>
+								<td class="col-md-7">
+									<div>
+										<h3>{{ campaign.campaign_name }}</h3>
+										<p>{{ campaign.campaign_description }}</p>
+									</div>
+								</td>
+								<td>
+									<ul style="padding-top:20px; text-align:right; list-style-type:none;">
+										<li style="padding-bottom:6px;">
+											<button class="btn btn-info btn-sm btn-block" type="button">Edit</button>
+										</li>
+										<li style="padding-bottom:6px;">
+											<button class="btn btn-danger btn-sm btn-block" type="button">Delete</button>
+										</li>
+										<li style="padding-bottom:6px;">
+											<button class="btn btn-warning btn-sm btn-block" type="button">End Campaign</button>
+										</li>
+									</ul>
+								</td>
+							</tr>
+						</table>
+					</p>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

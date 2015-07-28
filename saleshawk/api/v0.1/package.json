@@ -1,0 +1,22 @@
+{
+  "name": "v0.1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.10.2",
+    "express": "^4.11.1",
+    "express-session": "^1.10.1",
+    "mongoose": "^3.8.22",
+    "node-restful": "^0.1.17",
+    "passport": "^0.2.1",
+    "passport-twitter": "^1.0.2",
+    "session": "^0.1.0",
+    "util": "^0.10.3"
+  }
+}

@@ -1,0 +1,79 @@
+<div id="wrapper">
+
+<!-- Campaign 1 -->
+
+  <div ng-include src="'partials/user-nav.html'"></div>
+
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Create a Campaign</h2>
+
+          <div class="stepwizard">
+              <div class="stepwizard-row setup-panel">
+                  <div class="stepwizard-step">
+                      <a href="#step-1" type="button" class="btn btn-primary btn-circle">1</a>
+                      <p>Step 1 - Add a product</p>
+                  </div>
+                  <div class="stepwizard-step">
+                      <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                      <p>Step 2 - Add customers</p>
+                  </div>
+                  <div class="stepwizard-step">
+                      <a href="#step-3" type="button" class="btn btn-default btn-circle" disabled="disabled">3</a>
+                      <p>Step 3 - Create your campaign</p>
+                  </div>
+              </div>
+          </div>
+
+              <div class="row setup-content" id="step-1">
+                  <div class="col-xs-12">
+                      <div class="col-md-12">
+                          <h3> Step 1 - Add a product</h3>
+                          <form class="form-inline" ng-submit="getProducts()">
+                            <div class="form-group">
+                              <div class="input-group">
+                                <input type="text" required="required" ng-model="campaign.campaign_keyword" class="form-control" placeholder="Search for a product or Product ID..." />
+                                <span class="input-group-btn">
+                                  <button class="btn btn-info" type="submit"><i class="fa fa-search"></i> Search</button>
+                                </span>
+                              </div>
+                            </div>
+                          </form>
+
+                          <table class="table">
+                            <tr ng-repeat="product in products">
+                              <td>
+                                <div class="radio">
+                                  <label>
+                                    <input type="radio" name="optionsRadios" id="option-{{ product.Id.SkuPartNumber }}" ng-model="campaign.campaign_product" value="/{{ product.Id.CatEntryId }}/{{ product.Id.PartNumber }}">
+                                  </label>
+                                </div>
+                              </td>
+                              <td>
+                                <img width="80px" class="img-thumbnail" src="{{ product.Description.ImageURL }}" style="padding-top:20px; padding-bottom:20px;">
+                              </td>                              
+                              <td>
+                                <h4>{{ product.Description.Name }}</h4>
+                                <p>{{ product.Url }}</p>
+                              </td>
+                              <td>
+                                <h4 style="color:green;">${{ product.Price.DisplayPrice }}</h4>
+                              </td>                            
+                            </tr>
+                          </table>
+
+                          <br>
+                          <br>
+
+                          <a class="btn btn-primary btn-lg pull-right" type="button" ng-click="nextOne()">Next <i class="fa fa-caret-right"></i></a>
+                      </div>
+                  </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

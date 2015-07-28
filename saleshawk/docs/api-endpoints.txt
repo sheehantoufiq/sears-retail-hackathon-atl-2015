@@ -1,0 +1,15 @@
+GET			'/api/v0.1/merchants/:merchantID/products'								// Get all products
+GET 		'/api/v0.1/merchants/:merchantID/products/:productID'			// Get single product
+
+GET 		'/api/v0.1/merchants/:merchantID/campaigns'								// Get all campaigns
+GET 		'/api/v0.1/merchants/:merchantID/campaigns/:campaignID'		// Get single campaign
+POST		'/api/v0.1/merchants/:merchantID/campaigns'								// Create a campaign
+PUT			'/api/v0.1/merchants/:merchantID/campaigns/:campaignID'		// Update a campaign
+DELETE	'/api/v0.1/merchants/:merchantID/campaigns/:campaignID'		// Delete a campaign
+
+GET 		'/api/v0.1/merchants/:merchantID'													// Get single merchant
+PUT 		'/api/v0.1/merchants/:merchantID'													// Update merchant
+POST		'/api/v0.1/merchants'																			// Create merchant
+
+GET 		'/api/v0.1/tweets'
+GET 		'/api/v0.1/tweets/:tweetID'

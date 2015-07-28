@@ -1,0 +1,60 @@
+<div id="wrapper">
+
+<!-- Campaign 3 -->
+
+  <div ng-include src="'partials/user-nav.html'"></div>
+
+  <div id="page-content-wrapper">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12">
+          <h2>Create a Campaign</h2>
+
+          <div class="stepwizard">
+              <div class="stepwizard-row">
+                  <div class="stepwizard-step">
+                      <a href="#step-1" type="button" class="btn btn-default btn-circle" disabled="disabled">1</a>
+                      <p>Step 1 - Add a product</p>
+                  </div>
+                  <div class="stepwizard-step">
+                      <a href="#step-2" type="button" class="btn btn-default btn-circle" disabled="disabled">2</a>
+                      <p>Step 2 - Add customers</p>
+                  </div>
+                  <div class="stepwizard-step setup-panel">
+                      <a href="#step-3" type="button" class="btn btn-primary btn-circle">3</a>
+                      <p>Step 3 - Create your campaign</p>
+                  </div>
+              </div>
+          </div>
+
+          <form role="form">
+            <div class="row setup-content" id="step-3">
+                <div class="col-xs-12">
+                    <div class="col-md-12">
+                        <h3> Step 3 - Create your campaign</h3>
+                        <p>Set up a personalized message to tweet to potential customers:</p>
+                        <textarea class="form-control" rows="4">@CaringtonWhit @Iukeshairgame @allyrenda @gabby_duraan Check out our new Kenmore Elite! http://www.sears.com/43869209/p-02280379000P</textarea>
+                        <br>
+                        <p>Name this campaign:</p>
+                        <input type="text" required="required" ng-model="campaign.campaign_name" class="form-control" placeholder="ie: Broken Microwave" />
+                        <br>
+                        <p>Describe this campaign:</p>
+                        <input type="text" required="required" ng-model="campaign.campaign_description" class="form-control" placeholder="ie: Potential customers talking about broken microwaves on Twitter" />
+                        <br>                
+                        <a class="btn btn-info btn-lg pull-left" type="button" ng-href="#/create-campaign-2"><i class="fa fa-caret-left"></i> Back</a>                          
+                        <div class="btn-group pull-right">
+                          <button class="btn btn-info btn-lg" ng-click="createCampaign()" type="button">Save for later</button>
+                          <a class="btn btn-success btn-lg" ng-click="createCampaign()" type="button">Launch ad!</a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
